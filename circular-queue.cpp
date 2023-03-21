@@ -114,6 +114,7 @@ void CircularQueue::print() const {
         std:: cout << " " << items_[i] << " ";
     }
 
+//    std:: cout<< '\n' << head_ << " " << tail_;
 
 //TEST PRINT
 //    for (int i = 0; i < 5; i++)
