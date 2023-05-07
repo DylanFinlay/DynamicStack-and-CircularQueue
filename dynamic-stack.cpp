@@ -42,6 +42,7 @@ DynamicStack::StackItem DynamicStack::peek() const {
 
 void DynamicStack::push(StackItem value) {
     if(size_ == capacity_)
+//Once capacity is reached, the array capacity is doubled to allow more inserts
     {
         std::cout << "Stack cap is reached, size will now be doubled";
         StackItem *temp = new StackItem[2*capacity_];
