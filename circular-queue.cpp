@@ -19,15 +19,18 @@ CircularQueue::CircularQueue(unsigned int capacity) {
     tail_ = 0;
 }
 
+//Deconstructor
 CircularQueue::~CircularQueue() {
     delete[]items_;
     items_ = nullptr;
 }
 
+//Return the number of elements in the Queue
 unsigned int CircularQueue::size() const {
     return size_;
 }
 
+//Check if Queue is empty
 bool CircularQueue::empty() const {
     if (size_ == 0)
         return true;
@@ -35,6 +38,7 @@ bool CircularQueue::empty() const {
         return false;
 }
 
+//Check if Queue is full
 bool CircularQueue::full() const {
     if (size_ == capacity_)
         return true;
@@ -49,6 +53,7 @@ CircularQueue::QueueItem CircularQueue::peek() const {
         return items_[head_];
 }
 
+//Insert at the tail of the queue
 bool CircularQueue::enqueue(QueueItem value) {
     if (full())
     {
@@ -68,6 +73,7 @@ bool CircularQueue::enqueue(QueueItem value) {
 
 }
 
+//Remove at rhe gead of the queue
 CircularQueue::QueueItem CircularQueue::dequeue() {
     if (empty())
     {
